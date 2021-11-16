@@ -1,6 +1,8 @@
 class Review < ApplicationRecord
   # Direct associations
 
+  belongs_to :movie
+
   belongs_to :user
 
   # Indirect associations
