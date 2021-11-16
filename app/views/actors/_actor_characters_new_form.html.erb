@@ -1,0 +1,32 @@
+<!-- Form character start -->
+<%= form_with(model: @character, local: true) do |f| %>
+<!-- Form character end -->
+
+  <!-- Label and input for role start -->
+  <div class="form-group">
+    <%= f.label :role %>
+
+    <!-- Input for role start -->
+    <%= f.text_field :role, class: "form-control" %>
+    <!-- Input for role end -->
+  </div>
+  <!-- Label and input for role end -->
+
+  <!-- Label and input for actor_id start -->
+  <!-- Input for actor_id start -->
+  <%= f.hidden_field :actor_id, value: @actor.id %>
+  <!-- Input for actor_id end -->
+  <!-- Label and input for actor_id end -->
+
+  <!-- Label and input for movie_id start -->
+  <div class="form-group">
+    <%= f.label :movie_id %>
+
+    <!-- Input for movie_id start -->
+    <%= f.text_field :movie_id, class: "form-control" %>
+    <!-- Input for movie_id end -->
+  </div>
+  <!-- Label and input for movie_id end -->
+
+  <%= f.submit "Create character", class: "btn btn-block btn-outline-secondary" %>
+<% end %>
